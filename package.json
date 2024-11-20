@@ -1,0 +1,40 @@
+{
+  "name": "com.example.cash",
+  "displayName": "CordCash",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-plugin-android-permissions": "^1.1.5",
+    "cordova-plugin-audioinput": "^1.0.3",
+    "cordova-plugin-file": "^8.1.2",
+    "cordova-plugin-inappbrowser": "^6.0.0",
+    "cordova-plugin-media": "^7.0.0",
+    "cordova-plugin-media-capture": "^5.0.0",
+    "web": "^0.0.2"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-media": {},
+      "cordova-plugin-audioinput": {}
+    }
+  },
+  "dependencies": {
+    "com.example.cash": "file:"
+  }
+}
