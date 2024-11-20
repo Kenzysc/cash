@@ -37,27 +37,45 @@ body {
     padding: 0px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     width: 100%;
 }
 
 /* Portrait layout (default) */
 .app {
-    /* background:url(../img/logo.png) no-repeat center top; 170px x 200px */
-    position: absolute;
-    /* position in the center of the screen */
-    left: 50%;
-    top: 50%;
-    height: 50px;
-    /* text area height */
-    width: 225px;
-    /* text area width */
-    text-align: center;
-    padding: 180px 0px 0px 0px;
-    /* image height is 200px (bottom 20px are overlapped with text) */
-    margin: -115px 0px 0px -112px;
-    /* offset vertical: half of image height and text area height */
-    /* offset horizontal: half of text area width */
+ margin-top: 100px;
+ display: flex;
+ flex-direction: column;
+}
+.blink {
+    margin: 1rem auto;
+}
+
+.toggle-mic {
+    margin-inline: auto;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    color: #E4E4E4;
+    box-shadow: 1px 1px 8px #1B1B1B;
+}
+
+textarea {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+}
+textarea:focus {
+    outline: none;
+    border: 1px solid #A7A7A7;
+}
+audio {
+    margin: 1rem auto;
 }
 
 /* Landscape layout (with min-width) */
@@ -90,13 +108,21 @@ h1 {
 }
 
 .event.listening {
-    background-color: #333333;
+    /* background-color: #333333; */
     display: block;
 }
 
 .event.received {
     background-color: #4B946A;
     display: none;
+}
+.btn {
+    border: 1px solid #A7A7A7;
+    border-radius: 1rem;
+    padding: 0.5rem 0;
+    color: #E4E4E4;
+    background-color: transparent;
+    flex: 1;
 }
 
 #deviceready.ready .event.listening {

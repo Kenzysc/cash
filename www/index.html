@@ -41,14 +41,13 @@
 
 <body>
     <div class="app">
-        <h1>Send Text</h1>
+        <h1>DING PAY</h1>
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
         </div>
         <br />
-        <h1>Mic and Speaker PWA</h1>
-        <button id="start-mic">Start Microphone</button>
+        <button id="start-mic" class="toggle-mic">Start Microphone</button>
         <audio id="audio-output" controls></audio>
         <br />
         <div class="hidden" data-quiet-profile-name="audible"></div>
@@ -59,10 +58,12 @@
                     <textarea autofocus="true" autocapitalize="none" autocomplete="off" spellcheck="off"
                         class="form-control" style="resize:none" rows="5" data-quiet-text-input></textarea>
                 </div>
-                <button type="button" class="btn btn-default" style="width:100%" data-quiet-send-button
-                    data-quiet-sending-text="Sending...">Send Cash</button>
-                <button type="button" class="btn btn-default" style="width:100%" data-quiet-send-button
-                    data-quiet-sending-text="Sending...">Ask for Cash</button>
+                <div style="display: flex; gap: 0 1rem; margin: 1rem auto; width: 80%;">
+                    <button type="button" class="btn btn-default" data-quiet-send-button
+                        data-quiet-sending-text="Sending...">Send Cash</button>
+                    <button type="button" class="btn btn-default" data-quiet-send-button
+                        data-quiet-sending-text="Sending...">Ask for Cash</button>
+                </div>
             </section>
         </div>
     </div>
